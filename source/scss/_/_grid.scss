@@ -5,8 +5,47 @@
 $numberOfColumns: 12;
 $gutter: 30px;
 
+// ============== Breakpoints ==============
+// Bootstrap breakpoints
+@mixin sm(){
+    @media (min-width: 576px) { 
+        @content;
+     }
+}
+
+@mixin md(){
+    @media (min-width: 768px) { 
+        @content;
+     }
+}
+@mixin lg(){
+    @media (min-width: 992px) { 
+        @content;
+     }
+}
+@mixin xl(){
+    @media (min-width: 1200px) { 
+        @content;
+     }
+}
+
 // ============== Container ==============
 .container{
+    margin-left: auto;
+    margin-right: auto;
+
+    @include sm(){
+        width: 576;
+    }
+    @include md(){
+        width: 768;
+    }
+    @include lg(){
+        width: 992;
+    }
+    @include xl(){
+        width: 1200;
+    }
 }
 
 .container-fluid{
@@ -24,9 +63,40 @@ $gutter: 30px;
     padding-right: $gutter / 2;
 }
 
+
+
+
 // ============== Building the grid ==============
-@for $i from 1 to $numberOfColumns{
+@for $i from 1 through $numberOfColumns{
     .col-#{$i}{
         width: (100% / $numberOfColumns) * $i;
+    }
+}
+
+// col-sm
+@for $i from 1 through $numberOfColumns{
+    @include sm(){
+        .col-sm-#{$i}{width: (100% / $numberOfColumns) * $i !important;}
+    }
+}
+
+// col-md
+@for $i from 1 through $numberOfColumns{
+    @include md(){
+        .col-md-#{$i}{width: (100% / $numberOfColumns) * $i !important;}
+    }
+}
+
+// col-lg
+@for $i from 1 through $numberOfColumns{
+    @include lg(){
+        .col-lg-#{$i}{width: (100% / $numberOfColumns) * $i !important;}
+    }
+}
+
+// col-xl
+@for $i from 1 through $numberOfColumns{
+    @include xl(){
+        .col-xl-#{$i}{width: (100% / $numberOfColumns) * $i !important;}
     }
 }
