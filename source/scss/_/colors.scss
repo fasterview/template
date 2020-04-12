@@ -1,0 +1,38 @@
+/* 
+    This file for colors and things related to it, e.g. text colors, background ccolrs etc
+*/
+
+// This variable should holds all the colors 
+$colors: (
+    "white": #ffffff,
+    "black": #000000,
+    "light": #F4F7FC,
+    "dark": #111530,
+    "blue": #588DF8,
+    "green": #16E865,
+    "red": #FF0076,
+);
+
+/*
+    Return the color value
+*/
+@function  color($colorName) {
+    @return map-get($map: $colors, $key: $colorName);
+}
+
+
+
+@each $name, $value in $colors{
+
+    // ============== Background ==============
+    .bg-#{$name}{
+        background-color: $value;
+    }
+    
+    // ============== Text ==============
+    .text-#{$name}{
+        color: $value;
+    }
+
+}
+

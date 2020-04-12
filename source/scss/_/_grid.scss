@@ -1,0 +1,32 @@
+/*
+    This file has the grid system and breakpoints
+*/
+
+$numberOfColumns: 12;
+$gutter: 30px;
+
+// ============== Container ==============
+.container{
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// ============== col class ============== 
+[class^="col-"]{
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+}
+
+// ============== Building the grid ==============
+@for $i from 1 to $numberOfColumns{
+    .col-#{$i}{
+        width: (100% / $numberOfColumns) * $i;
+    }
+}

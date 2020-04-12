@@ -4,6 +4,43 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        //- Styles
+        link(rel="stylesheet", href="css/style.min.css")
+        //- Fonts
+        link(href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,400&display=swap", rel="stylesheet")
+        //- Title 
+        title Fasterview
     body
-        
+
+        .row
+            -for(let i = 1;i <= 12; i++)
+                div(class="col-" + i, style="margin: 10px 0px;")
+                    div(style="height: 20px; background-color: black;")
+                div(class="col-" + (12 - i), style="margin: 10px 0px;")
+                    div(style="height: 20px; background-color: black;")
+
+        div(class="col-12 bg-blue" , style=" margin: 40px 0px; padding: 20px 0px;")
+            div(class="col-12 bg-white" , style="height: 10px; margin: 10px 0px;")
+            div(class="col-12 bg-black" , style="height: 10px; margin: 10px 0px;")
+            div(class="col-12 bg-light" , style="height: 10px; margin: 10px 0px;")
+            div(class="col-12 bg-dark" , style="height: 10px; margin: 10px 0px;")
+            div(class="col-12 bg-green" , style="height: 10px; margin: 10px 0px;")
+            div(class="col-12 bg-red" , style="height: 10px; margin: 10px 0px;")
+    
+    
+        div(class="col-12 text-blue bg-red" , style=" margin: 40px 0px; padding: 20px 0px;")
+            |Hello friend
+            div(class="col-12 text-white" , style="margin: 10px 0px;")
+                |Hello friend
+            div(class="col-12 text-black" , style="margin: 10px 0px;")
+                |Hello friend
+            div(class="col-12 text-light" , style="margin: 10px 0px;")
+                |Hello friend
+            div(class="col-12 text-dark" , style="margin: 10px 0px;")
+                |Hello friend
+            div(class="col-12 text-green" , style="margin: 10px 0px;")
+                |Hello friend
+            div(class="col-12 text-red bg-blue" , style="margin: 10px 0px;")
+                |Hello friend
+            
+    
