@@ -1,0 +1,12 @@
+//- This contains all mixins related to form elements
+
+mixin input(inputType, inputId="", inputClass="", label=null, inputValue="", error="")
+    .form-group
+        if label
+            label(for=inputID) #{label}
+        case inputType
+            default
+                input(type=inputType, class=inputClass + ( error ? "invalid" : "" ), id=inputID, name=inputName, value=inputValue)
+        
+        if error
+            small.error-msg #{error}

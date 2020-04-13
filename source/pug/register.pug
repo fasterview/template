@@ -6,22 +6,11 @@ block content
         .row
             .col-lg-5.col-md-7.col-sm-9.col-12.mx-auto
                 form.auth-form
-                    .form-group
-                        label(for="username") Username
-                        input(type="text", id="username")
+                    +input("text","name", "", "Username", "", "Invalid username")
+                    +input("email","email", "", "Email")
+                    +input("password","password", "", "Passwrod")
+                    +input("password","confirm_password", "", "Confirm Password")
 
-                    .form-group
-                        label(for="email") Email
-                        input(type="email", id="email", value="johdoe@example.com").invalid
-                        small.error-msg Wrong email
-
-                    .form-group
-                        label(for="password") Password
-                        input(type="password", id="password")
-                    .form-group
-                        label(for="confirm_password") Confirm password
-                        input(type="password", id="confirm_password")
-                    
                     .form-group.mt-30.d-sm-flex.justify-between.align-center
                         button(type="submit") Register
                         span.msg

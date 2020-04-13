@@ -6,14 +6,8 @@ block content
         .row
             .col-lg-5.col-md-6.col-sm-8.col-12.mx-auto
                 form.auth-form
-                    .form-group
-                        label(for="email") Email
-                        input(type="email", id="email", value="johdoe@example.com").invalid
-                        small.error-msg Wrong email
-
-                    .form-group
-                        label(for="password") Password
-                        input(type="password", id="password")
+                    +input("email","email", "", "Email", "", "This email is already used")
+                    +input("password","password", "", "Passwrod")
                     
                     .form-group.mt-30.d-flex.justify-between.align-center
                         button(type="submit") Login
