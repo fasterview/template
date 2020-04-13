@@ -1,0 +1,14 @@
+/*
+ This file contains links style
+*/
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.a-blue{
+    color: color("blue");
+    &:hover{
+        color: darken(color("blue"), 10)
+    }
+}

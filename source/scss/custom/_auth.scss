@@ -1,0 +1,39 @@
+/*
+    Custome style for login and register page
+*/
+.auth-form-container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    min-height: 500px;
+    .row{
+        width: 100%;
+    }
+}
+
+.auth-form{
+    background-color: color("dark");
+    padding: 20px;
+    border-radius: 10px;
+
+    label{
+        color: color("white");
+        font-size: 18px;
+    }
+
+    button[type="submit"]{
+        padding: 5px 30px;
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    .msg{
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        color: color("white");
+        a{
+            font-weight: bold;
+        }
+    }
+}
