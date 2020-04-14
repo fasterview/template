@@ -6,11 +6,26 @@ nav.navbar
         .col-12.d-flex.justify-between.align-center
             a(href="/").logo
                 img(src="/images/logo.png", alt="")
-            ul.navbar-list
+            <!--ul.navbar-list
                 li
                     a(href="/login.html").navbar-link Login
                 li
-                    a(href="/register.html").navbar-link-btn Join Free
+                    a(href="/register.html").navbar-link-btn Join Free -->
+
+            ul.navbar-list
+                <!--li.item-btn.dropdown-wrapper.show-dropdown -->
+                li.item-btn.dropdown-wrapper
+                    img(src="/images/user.png")
+                    span.name John Doe
+                    i.fas.fa-sort-down
+                    ul.list-item-dropdown.dropdown-menu
+                        li
+                            a(href="#").active Companies
+                        li
+                            a(href="/profile") Profile
+                        li
+                            a(href="#") Logout
+
 
 
 

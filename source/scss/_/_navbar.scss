@@ -2,67 +2,139 @@
     This file contains all style for the navbar
 */
 
-.navbar{
-    background-color: color("dark");
-    color: color("white");
-    padding: 10px 0px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
+.navbar {
+  background-color: color("dark");
+  color: color("white");
+  padding: 10px 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 
-    // ==== Logo ==== 
-    .logo{
-        &,
-        & img{
-            width: 50px;
-            @include sm-r(){
-                width: 40px;
-            }
-        }
+  // ==== Logo ====
+  .logo {
+    &,
+    & img {
+      width: 50px;
+      @include sm-r() {
+        width: 40px;
+      }
     }
+  }
 }
 
-.navbar-list{
+.navbar-list {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-link {
+  font-size: 24px;
+  margin-left: 30px;
+  color: color("white");
+  @include sm-r() {
+    font-size: 20px;
+  }
+  &:hover {
+    color: color("blue");
+  }
+  &.active {
+    color: color("blue");
+  }
+}
+
+.navbar-link-btn {
+  @extend .navbar-link;
+  background-color: color("blue");
+  padding: 3px 15px;
+  border-radius: 4px;
+  @include sm-r() {
+    padding: 3px 10px;
+  }
+  &:hover {
+    color: color("white");
+    background-color: darken(color("blue"), 10);
+  }
+  &.active {
+    background-color: transparent;
+    &:hover {
+      color: color("blue");
+      background-color: transparent;
+    }
+  }
+}
+
+.item-btn {
+  display: flex;
+  align-items: center;
+  background-color: color("blue");
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  img {
+    $imgSize: 35px;
+    width: $imgSize;
+    height: $imgSize;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+  .name {
+    margin: 0px 10px;
+    font-size: 24px;
+  }
+  i {
+    font-size: 30px;
+    margin-top: -8px;
+  }
+
+  &:hover {
+    background-color: darken(color("blue"), 10);
+  }
+
+  .list-item-dropdown {
+    display: none;
+    list-style: none;
+    position: absolute;
     padding: 0px;
     margin: 0px;
-    text-align: center;
-    list-style: none;
-    display: flex;
-}
-
-.navbar-link{
-    font-size: 24px;
-    margin-left: 30px;
-    color: color("white");
-    @include sm-r(){
-        font-size: 20px;
-    }
-    &:hover{
-        color: color("blue");
-    }
-    &.active{
-        color: color("blue");
-    }
-}
-
-.navbar-link-btn{
-    @extend .navbar-link;
-    background-color: color("blue");   
-    padding: 3px 15px;
-    border-radius: 4px;
-    @include sm-r(){
-        padding: 3px 10px;
-    }
-    &:hover{
-        color: color("white");
-        background-color: darken(color("blue"), 10);
-    }
-    &.active{
-        background-color: transparent;
-        &:hover{
-            color: color("blue");
-            background-color: transparent;
+    top: 100%;
+    right: 0px;
+    background-color: color("light");
+    border: 1px solid #D8D8D8;
+    min-width: 200px;
+    li{
+        padding: 10px 10px 0px 10px;
+        text-align: left;
+        a{
+            display: block;
+            color: color("dark");
+            padding-bottom: 5px;
         }
+
+        &.active,
+        a.active{
+            color: color("blue");
+        }
+        
+        &:not(:last-child){
+            a{
+                border-bottom: 1px solid #D8D8D8;
+            }
+        }
+
+        &:hover{
+            background-color: darken(color("light"), 5);
+        }
+
     }
+  }
 }
 
+.dropdown-wrapper.show-dropdown{
+    .dropdown-menu{
+        display: block;
+    }
+}
