@@ -13,6 +13,12 @@ $gutter: 30px;
      }
 }
 
+@mixin sm-r(){
+    @media (max-width: 576px) { 
+        @content;
+     }
+}
+
 @mixin md(){
     @media (min-width: 768px) { 
         @content;
@@ -35,16 +41,16 @@ $gutter: 30px;
     margin-right: auto;
 
     @include sm(){
-        width: 576;
+        width: 576px;
     }
     @include md(){
-        width: 768;
+        width: 768px;
     }
     @include lg(){
-        width: 992;
+        width: 992px;
     }
     @include xl(){
-        width: 1200;
+        width: 1200px;
     }
 }
 

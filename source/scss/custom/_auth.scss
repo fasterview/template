@@ -4,8 +4,8 @@
 .auth-form-container{
     display: flex;
     align-items: center;
-    height: 100vh;
-    min-height: 500px;
+    height: calc(100vh - 70px); // 70px for the Navbar
+    min-height: 675px;
     .row{
         width: 100%;
     }
