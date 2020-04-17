@@ -30,3 +30,34 @@
         }
     }
 }
+
+
+// Table section
+.interview-table{
+    margin: 30px 0px;
+    header{
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+}
+.search-form-container{
+    position: relative;
+    input, button{
+        display: inline-block;
+        margin: 0px;
+    }
+    input{
+        font-weight: 500;
+        padding-right: 50px;
+    }
+    button{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        padding: 0px 14px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+

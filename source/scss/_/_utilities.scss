@@ -3,6 +3,7 @@
         - display
         - margin
         - padding
+        - fonts
 */
 
 // ============ Display ============
@@ -43,4 +44,9 @@
 
 .mt-30 {
   margin-top: 30px;
+}
+
+// ============ Fonts ============
+.font-bold{
+  font-weight: bold;
 }

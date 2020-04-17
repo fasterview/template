@@ -29,15 +29,21 @@ textarea{
 }
 
 // ============== Button ==============
-button{
+.btn{
     border: none;
     border-radius: 4px;
-    background-color: color("blue");
     text-align: center;
-    color: color("white");
     font-weight: bold;
     font-size: 18px;
     padding: 5px 10px;
+}
+.btn-disabled{
+    opacity: .6;
+}
+button{
+    @extend .btn;
+    background-color: color("blue");
+    color: color("white");
     cursor: pointer;
     &:hover{
         background-color: darken(color("blue"), 10);
