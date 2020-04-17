@@ -1,0 +1,32 @@
+extends inc/layout.pug
+
+block content
+
+    div.mt-30
+        .container-fluid
+            .col-12.dashboard-container
+                //- ============================ Cards ============================
+                section.interviews-container.bg-white
+                    header.d-flex.justify-between.align-center
+                        h2 Upcoming interviews
+                        a.link(href="#") View all
+                    .interview-cards.row
+                        -for(let i = 1; i <= 4; i++)
+                            div.col-lg-3.col-md-6.col-12
+                                .interview-card.bg-light
+                                    .interview-card-header.align-center
+                                        img(src=`/images/placeholder (${i}).jpg`).interview-card-header_img
+                                        .interview-card-header_info
+                                            span.name.d-block Jane Doe
+                                            a.link.d-block.a-violet(href="#") Web developer
+                                    .interview-card-body
+                                        div.interview-card-body_row.d-flex.justify-between
+                                            span.info <i class="far fa-calendar-alt text-violet"></i>  05/11/2020
+                                            span.info <i class="far fa-clock text-violet"></i>  01:30 PM
+                                        div.d-flex.justify-between
+                                            span.info <i class="fas fa-map-marker-alt text-violet"></i> Nasr city, Cairo branch
+                                        
+
+
+                //- ============================ Table ============================
+                

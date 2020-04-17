@@ -1,0 +1,30 @@
+/*
+    Custom style for dashboard page
+*/
+.dashboard-container{
+    padding: 0px 10px;
+    @include sm{
+        padding: 0px 30px;
+    }
+}
+
+.interviews-container{
+    padding: 20px 15px;
+    h1,h2,h3{
+        padding: 0px;
+        margin: 0px;
+    }
+    header{
+        margin-bottom: 20px;
+        .link{
+            color: color("blue");
+            font-size: 20px;
+            opacity: .8;
+            cursor: pointer;
+
+            &:hover{
+                color: darken($color: color("blue"), $amount: 10)
+            }
+        }
+    }
+}

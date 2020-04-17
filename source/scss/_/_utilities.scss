@@ -7,6 +7,9 @@
 
 // ============ Display ============
 
+.d-block{
+  display: block;
+}
 // Flex
 .d-flex {
   display: flex;
@@ -24,6 +27,12 @@
 }
 .align-center {
   align-items: center;
+}
+
+// ============ Padding ============
+.px-30{
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 // ============ Margin ============

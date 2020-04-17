@@ -12,3 +12,9 @@ a{
         color: darken(color("blue"), 10)
     }
 }
+.a-violet{
+    color: color("violet");
+    &:hover{
+        color: darken(color("violet"), 10)
+    }
+}

@@ -1,0 +1,31 @@
+
+
+// ================== Intervew cards ==================
+
+.interview-card{
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px transparentize($color: color("black"), $amount: 1 - .16);
+    margin-bottom: 20px;
+    @include lg{
+        margin-bottom: 0px;
+    }
+}
+.interview-card-header{
+    display: flex;
+    margin-bottom: 20px;
+    &_img{
+        $imgSize: 50px;
+        height: $imgSize;
+        width: $imgSize;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        margin-right: 10px;
+    }
+}
+.interview-card-body_row{
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
