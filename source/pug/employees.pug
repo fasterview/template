@@ -1,0 +1,39 @@
+extends inc/layout.pug
+
+block content
+
+    div.mt-30
+        .container-fluid
+            .col-12.dashboard-container
+
+                //- ============================ Table ============================
+                .interview-table
+                    header.d-flex.justify-between.align-center
+                        h2 Last submitted interviews
+                        .search-form-container.col-md-3.col-sm-4.col-12
+                            form(action="GET")
+                                input(type="text", placeholder="Search")
+                                button <i class="fas fa-search"></i>
+                    
+                    section.table-wrapper
+                        table
+                            thead                                                   
+                                tr
+                                    td
+                                    td Name
+                                    td Email
+                                    td Position
+                                    td Salary
+                                    td Details
+                            tbody
+                                -for(let i = 0; i <= 5; i++)
+                                    tr
+                                        td
+                                            img.table-img(src=`/images/placeholder (${(i % 4) + 1}).jpg`)
+                                        td John Doe
+                                        td john@example.com
+                                        td.text-violet.font-bold 
+                                            a(href="#") Front-end
+                                        td #{3211 * (i + 1)}$
+                                        td 
+                                            button.bg-blue View
