@@ -1,0 +1,27 @@
+extends inc/layout.pug
+
+block content
+
+    div.mt-30
+        .container-fluid
+            .col-12.dashboard-container
+                    h2 
+                        |Full-stack Web Developer 
+                        span.font-light At 
+                        |Some Awesome Agancy
+
+                    h2 Interview Questions
+                    section.table-wrapper
+                        table
+                            thead                                                   
+                                tr
+                                    td Question
+                                    td Time
+                            tbody
+                                -for(let i = 0; i <= 5; i++)
+                                    tr
+                                        td.font-bold Some question here to appear for the user to answer
+                                        td.font-bold 3 Minutes
+                    
+                    section.mt-20
+                        button.btn-blue Start

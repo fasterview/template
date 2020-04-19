@@ -24,6 +24,8 @@ table{
 
 thead{
     font-size: 20px;
+    background-color: color("dark");
+    color: color("light");
 }
 
 tbody{
@@ -43,6 +45,10 @@ tbody{
     //         z-index: 10;
     //     }
     // }
+
+    tr:nth-child(even){
+        background-color: darken(color("light"), 2);
+    }
 }
 tr{
     border-bottom: 1px solid #D8D8D8;

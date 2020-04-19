@@ -42,11 +42,18 @@
   margin-right: auto;
 }
 
+
+.mt-20 {
+  margin-top: 20px;
+}
 .mt-30 {
   margin-top: 30px;
 }
 
 // ============ Fonts ============
 .font-bold{
-  font-weight: bold;
+  font-weight: bold !important;
+}
+.font-light{
+  font-weight: normal;
 }
