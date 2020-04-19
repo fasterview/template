@@ -41,19 +41,37 @@
   margin-left: auto;
   margin-right: auto;
 }
+.ml-auto {
+  margin-left: auto;
+}
 
 
+.my-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.my-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .mt-20 {
   margin-top: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
 }
 .mt-30 {
   margin-top: 30px;
 }
 
-// ============ Fonts ============
+// ============ Fonts & Text ============
 .font-bold{
   font-weight: bold !important;
 }
 .font-light{
   font-weight: normal;
+}
+
+.text-center{
+  text-align: center;
 }

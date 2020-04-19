@@ -7,6 +7,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
+select,
 textarea{
     width: 100%;
     padding: 10px;
@@ -19,6 +20,19 @@ textarea{
 
     &.invalid{
         border: 3px solid color("red");
+    }
+}
+.form-small{
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea{
+        font-size: 14px;
+        &.invalid{
+            border: 2px solid color("red");
+        }
     }
 }
 .error-msg{

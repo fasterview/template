@@ -1,10 +1,14 @@
 //- This contains all mixins related to form elements
 
-mixin input(inputType, inputId="", inputClass="", label=null, inputValue="", error="")
+mixin input(inputType, inputId="", inputClass="", label=null, inputValue="", error="", options=[])
     .form-group
         if label
             label(for=inputID) #{label}
         case inputType
+            when "select"
+                select(class=( error ? "invalid" : "" ))
+                    -for(let o of options)
+                        option(value=o) #{o}
             default
                 input(type=inputType, class=inputClass + ( error ? "invalid" : "" ), id=inputID, name=inputName, value=inputValue)
         

@@ -1,0 +1,46 @@
+/*
+    Custom style for "create interview" page
+*/
+
+.create-interview-form{
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea{
+        box-shadow: 0px 3px 6px transparentize($color: color("dark"), $amount: 1 - .2);
+    }
+}
+
+.add-btn{
+    display: block;
+    $size: 40px;
+    width: $size;
+    height: $size;
+    // background-color: darken($color: color("light"), $amount: 20);
+    background-color: #DBDBDB;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($color: color("light"), $amount: 20);
+    }
+    &:before,
+    &:after{
+        content: "";
+        width: 80%;
+        height: 4px;
+        background-color: color("light");
+        border-radius: 4px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+    &:after{
+        // transform-origin: center;
+        transform: translate(-50%, -50%) rotateZ(90deg);
+    }
+
+
+}

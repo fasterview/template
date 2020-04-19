@@ -1,0 +1,29 @@
+extends inc/layout.pug
+
+block content
+
+    .container.mt-30
+        h1.text-center Create New Interview
+        form.form-small.create-interview-form.my-30
+            .row
+                .col-md-8.col-12.mx-auto
+                    .row
+                        div.col-12.form-group
+                            +input("select","company", "", "Company", "something", "Some error", ["Some awesome company", "LeadTech", "Something"])
+                        div.col-12.form-group
+                            +input("text","company", "", "Position", "something")
+                        .col-12
+                            h1.my-10 Questions
+                    -for(let i = 1; i <= 5; i++)
+                        .row.my-10
+                            div.col-md-6.col-12.form-group
+                                +input("text","company", "", i + "- Question", "something")
+                            div.col-md-6.col-12.form-group
+                                +input("number","time", "", "Question time duration", "something")
+            
+                    .col-12.d-flex
+                        .mb-30.ml-auto
+                            span.add-btn                
+                    .col-12
+                        .form-group.col-12
+                            button(type="submit").btn.btn-blue.px-30 Create
