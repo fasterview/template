@@ -14,7 +14,7 @@
   .logo {
     &,
     & img {
-      width: 50px;
+      width: 45px;
       @include sm-r() {
         width: 40px;
       }
@@ -70,11 +70,11 @@
   display: flex;
   align-items: center;
   background-color: color("blue");
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
   position: relative;
   img {
-    $imgSize: 35px;
+    $imgSize: 27px;
     width: $imgSize;
     height: $imgSize;
     object-fit: cover;
@@ -83,10 +83,10 @@
   }
   .name {
     margin: 0px 10px;
-    font-size: 24px;
+    font-size: 18px;
   }
   i {
-    font-size: 30px;
+    font-size: 27px;
     margin-top: -8px;
   }
 
