@@ -10,7 +10,9 @@ block content
                     +input("password","password", "", "Passwrod")
                     
                     .form-group.mt-30.d-flex.justify-between.align-center
-                        button(type="submit") Login
+                        button(type="submit").loading 
+                            span.btn-text Login
+                            <div class="ring"></div>
                         span.msg
                             | Don't have an account? 
                             a(href="/register.html", class="a-blue") Register

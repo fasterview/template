@@ -51,7 +51,8 @@ textarea{
     font-size: 18px;
     padding: 5px 10px;
 }
-.btn-disabled{
+.btn-disabled,
+button[disabled]{
     opacity: .6;
 }
 button{
@@ -63,6 +64,47 @@ button{
         background-color: darken(color("blue"), 10);
     }
 }
+// Loading button
+.loading{
+    position: relative;
+    .btn-text{
+        visibility: hidden;
+    }
+    $loadingSize: 1.5em;
+    .ring {
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: red;
+    }
+    .ring:after {
+        content: " ";
+        display: block;
+        width: $loadingSize / 2;
+        height: $loadingSize / 2;
+        margin: 0px;
+        border-radius: 50%;
+        border: .15em solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: ring 1.2s linear infinite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @keyframes ring {
+        0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+}
+  
 
 
 .form-group{
