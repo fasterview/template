@@ -1,0 +1,50 @@
+/*
+    Custom style for profile page
+*/
+
+.user-info-container{
+    padding: 20px 0px 30px 0px;
+    box-shadow: 0px 3px 6px transparentize($color: color("black"), $amount: 1 - .16);
+    .user-info{
+        display: flex;
+        align-items: cetner;
+        flex-direction: column;
+        text-align: center;
+    }
+    .user-pic{
+        $imgSize: 150px;
+        width: $imgSize;
+        height: $imgSize;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 10px;
+        @extend .mx-auto;
+        @include sm-r{
+            $imgSize: 120px;
+            width: $imgSize;
+            height: $imgSize;
+    
+        }
+
+    }
+
+    .user-name{
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 32px;
+        @include sm-r{
+            font-size: 24px;
+        }
+    }
+
+    .user-bio{
+        font-weight: normal;
+        font-size: 20px;
+        padding: 0px;
+        margin: 0px;
+        @include sm-r{
+            font-size: 18px;
+        }
+    }
+}
