@@ -2,8 +2,8 @@ extends inc/layout.pug
 
 block content
 
-    .container-fluid.bg-white.profile-container
-        .user-info-container
+    .container-fluid.profile-container
+        .user-info-container.bg-white
             .row
                 .col-sm-8.col-lg-6.mx-auto
                     .user-info
@@ -11,3 +11,25 @@ block content
                         span.user-name John Doe
                         p.user-bio
                             |Full-stack web developer and UI/UX designer, Experienced on Laravel, Angular, database design and implementation and UI/UX tools such as AdobeXD and Photoshop.
+        
+        .companies.container
+            h2.mt-30.companies-header.col-12.text-center You Don't Work On A Company Yet!
+            h2.mt-30.companies-header.col-12 Companies You Work On
+            section.interviews-container.bg-white.mb-30
+                .interview-cards.row.align-end
+                    -for(let i = 1; i <= 3; i++)
+                        div.col-lg-3.col-md-6.col-12
+                            div.bg-light.company-card
+                                a(href="#")
+                                    //- img.card-img.img-fluid(src="/images/placeholder (2).jpg")
+                                    .interview-card
+                                        h3 Company Name
+                                        h4.text-violet.my-0 User Role
+                    div.col-lg-3.col-md-6.col-12
+                        div.bg-light.company-card
+                            a(href="#")
+                                .interview-card
+                                    h3 Company Name
+                                    h4.text-violet.my-0 User Role
+                                        
+                                

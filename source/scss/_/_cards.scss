@@ -32,3 +32,22 @@
         margin-bottom: 10px;
     }
 }
+
+
+.company-card{
+    box-shadow: 0px 3px 6px transparentize($color: color("black"), $amount: 1 - .16);   
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    transition: box-shadow .15s ease-in;
+    @include sm-r{
+        margin-bottom: 20px;
+    }
+    &:hover{
+        box-shadow: none;
+    }
+    .interview-card{
+        box-shadow: none;
+        border-radius: 0px;
+    }
+}

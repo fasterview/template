@@ -64,7 +64,7 @@ $gutter: 30px;
 }
 
 // ============== col class ============== 
-[class^="col-"]{
+[class*="col-"]{
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
 }
