@@ -51,9 +51,17 @@ textarea{
     font-size: 18px;
     padding: 5px 10px;
 }
+.btn-sm{
+    @extend .btn;
+    font-size: 16px;
+    border-radius: 2px;
+}
 .btn-disabled,
 button[disabled]{
     opacity: .6;
+}
+button[disabled]{
+    cursor: not-allowed;
 }
 button{
     @extend .btn;
@@ -64,6 +72,15 @@ button{
         background-color: darken(color("blue"), 10);
     }
 }
+@each $name, $value in $colors{
+    .btn-#{$name}{
+        background-color: $value;
+        &:hover{
+            background-color:  darken($value, 7.5%);
+        }
+    }
+}
+
 // Loading button
 .loading{
     position: relative;
